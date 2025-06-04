@@ -1,12 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity: Water</title>
+  <style>
+    :root {
+      --yellow: #fdd835;
+      --gray: #f5f5f5;
+      --dark-gray: #333;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--dark-gray);
+      background-color: var(--gray);
+    }
+
+    header {
+      background: var(--yellow);
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--dark-gray);
+      font-weight: 500;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: var(--dark-gray);
+      margin-bottom: 4px;
+      border-radius: 5px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--white);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .subscribe {
+      background: var(--yellow);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .subscribe input {
+      padding: 0.5rem;
+      margin: 0.5rem;
+      width: 200px;
+    }
+
+    .subscribe button {
+      padding: 0.7rem 1.5rem;
+      background: var(--dark-gray);
+      color: var(--white);
+      border: none;
+      cursor: pointer;
+    }
+
+    .impact, .stories, .get-involved {
+      padding: 2rem;
+      background: var(--white);
+      margin: 1rem 0;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--dark-gray);
+    }
+
+    footer {
+      background: var(--dark-gray);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: var(--yellow);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Add your HTML here -->
+  <header>
+    <div class="logo">Charity: Water</div>
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="nav-links">
+        <li><a href="#">Get Involved</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Impact</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div style="
+  background-image: url('img/Firefly_create an image for the brand -Charity water- they are abrand that strives to provide 150610 (1).jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 30px;
+  color: rgb(6, 6, 6);
+">
+  <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Every Drop Counts, Every Life Matters.</h1>
+  <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+    One out of every ten people lack access to clean drinking water. With your help, this can change.
+  </p>
+</div>
+</div>
+  </section>
+
+  <section class="subscribe">
+    <h2>Stay in the Loop</h2>
+    <p>Receive updates on the clean water initiatives that you are supporting.</p>
+    <input type="text" placeholder="First Name">
+    <input type="text" placeholder="Last Name">
+    <input type="email" placeholder="Email">
+    <button>Subscribe</button>
+  </section>
+
+ <section style="
+  background-image: url('img/landing page charity water.png');
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 2rem;
+  color: black;
+  text-align: center;
+">
+  <div style="
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 12px;
+  ">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem;">About Us</h2>
+    <p style="font-size: 1.1rem; line-height: 1.6;">
+      Charity: Water is on a quest to provide clean and safe drinking water to every individual occupying the planet.
+      <br><br>
+      We fund and implement sustainable water solutions in the world's most distant and underprivileged communities by combining radical transparency, innovative fundraising, and dignity-first storytelling.
+      <br><br>
+      However, we cannot accomplish our mission alone. People like you are the driving force behind our work.
+      <br><br>
+      Every supporter, from monthly donations to college students, gamers to marathon runners, contributes to the creation of pure water through compassion.
+    </p>
+  </div>
+</section>
+
+  </div>
+
 </body>
 </html>
+
+
+  <section class="About Us">
+    <h2 class="section-title"></h2>
+    <p></p>
+    <section style="padding: 3rem 2rem; max-width: 1000px; margin: auto;">
+  <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;"></h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 2rem;">
+    <img src="img/Firefly_A local community member and an engineer working together to install a water filtrati 290590.jpg" alt="Local engineer collaborating" 
+         style="width: 100%; max-width: 48%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+    
+    <img src="img/Firefly_Young volunteers installing a clean water system in a rural village, working together 10768.jpg" alt="Community collaboration" 
+         style="width: 100%; max-width: 48%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+  </div>
+
+  <div style="text-align: center;">
+    <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
+      We collaborate with experienced local organizations and engineers to construct 
+      community-owned, sustainable water projects across the globe.
+    </p>
+  </div>
+</section>
+<section style="background-color: #474646; color: white; padding: 4rem 2rem;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 3rem;">Global Impact</h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 3rem; align-items: flex-start; max-width: 1000px; margin: auto;">
+
+    <!-- Global Impact -->
+    <div style="flex: 1 1 300px; text-align: center;">
+      <img src="img/IMG_1680 2.PNG" alt="Globe representing global impact" style="width: 100px; height: auto; margin-bottom: 1rem;" />
+      <p style="font-size: 1.1rem; line-height: 1.6;">
+        <strong>As of April 15, 2025:</strong><br><br>
+        We reached <strong>29 countries</strong><br>
+        We served <strong>20,258,007 individuals</strong><br>
+        We completed <strong>184,104 water projects</strong>
+      </p>
+    </div>
+
+    <!-- Regional Impact -->
+    <div style="flex: 1 1 300px; text-align: center;">
+      <img src="img/IMG_1678.PNG" alt="Location marker for regional impact" style="width: 100px; height: auto; margin-bottom: 1rem;" />
+      <p style="font-size: 1.1rem; line-height: 1.6;">
+        <strong>Regional Impact:</strong><br><br>
+        Central Africa: 17K<br>
+        Southeast Asia: 9.6K<br>
+        South Asia: 19K<br>
+        West Africa: 5.3K<br>
+        Southern Africa: 12K<br>
+        East Africa: 3.6K<br>
+        Central America: 110K
+      </p>
+    </div>
+
+  </div>
+</section>
+
+</section>
+
+  </section>
+
+  <section class="Stories">
+    <h2 class="section-title"></h2>
+    <section style="padding: 3rem 2rem; max-width: 1000px; margin: auto;">
+  <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">Stories of Change</h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
+
+    <!-- Story 1 -->
+    <div style="flex: 1 1 250px; max-width: 300px; text-align: center;">
+      <img src="img/Screenshot 2025-06-03 at 8.23.15 PM.png" alt="Amina's clean water success" 
+           style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <p style="margin-top: 0.75rem; font-size: 1rem;">
+        <strong>Amina</strong> can now focus on her studies instead of walking miles for water.
+      </p>
+    </div>
+
+    <!-- Story 2 -->
+    <div style="flex: 1 1 250px; max-width: 300px; text-align: center;">
+      <img src="img/Screenshot 2025-06-03 at 8.23.36 PM.png" alt="Maria and daughter" 
+           style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <p style="margin-top: 0.75rem; font-size: 1rem;">
+        <strong>Maria</strong> no longer fears her daughter getting sick from dirty water.
+      </p>
+    </div>
+
+    <!-- Story 3 -->
+    <div style="flex: 1 1 250px; max-width: 300px; text-align: center;">
+      <img src="img/Screenshot 2025-06-03 at 8.22.48 PM.png" alt="Abdu enjoying clean water" 
+           style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <p style="margin-top: 0.75rem; font-size: 1rem;">
+        <strong>Abdu</strong> starts every day with clean water after decades without it.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  </section>
+
+  <section class="get-involved">
+    <h2 class="section-title"></h2>
+   <section style="padding: 3rem 2rem; max-width: 1000px; margin: auto;">
+  <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">Get Involved</h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 1.5rem;">
+
+    <!-- Donate -->
+    <div style="flex: 1 1 250px; max-width: 300px; text-align: center; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <img src="img/Screenshot 2025-06-03 at 8.31.44 PM.png" alt="Donate to provide water" style="width: 100%; border-radius: 12px;" />
+        <p style="margin-top: 1rem; font-size: 1rem;">
+          <strong>Donate</strong> — Change is fueled by your generosity. Contribute now to help communities worldwide access clean, life-saving water.
+        </p>
+      </div>
+      <a href="#donate" style="
+        margin-top: auto;
+        padding: 0.75rem 1.5rem;
+        background-color: #fdd835;
+        color: #2e2e2e;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        display: inline-block;
+      ">
+        Donate Now
+      </a>
+    </div>
+
+    <!-- Fundraise -->
+    <div style="flex: 1 1 250px; max-width: 300px; text-align: center; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <img src="img/Screenshot 2025-06-03 at 8.32.10 PM.png" alt="Fundraising for water projects" style="width: 100%; border-radius: 12px;" />
+        <p style="margin-top: 1rem; font-size: 1rem;">
+          <strong>Fundraise</strong> — Launch a campaign and organize your neighborhood.
+        </p>
+      </div>
+      <a href="#fundraise" style="
+        margin-top: auto;
+        padding: 0.75rem 1.5rem;
+        background-color: #fdd835;
+        color: #2e2e2e;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        display: inline-block;
+      ">
+        Start a Fundraiser
+      </a>
+    </div>
+
+    <!-- Join the Spring -->
+    <div style="flex: 1 1 250px; max-width: 300px; text-align: center; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <img src="img/Screenshot 2025-06-03 at 8.32.39 PM.png" alt="Join the Spring giving community" style="width: 100%; border-radius: 12px;" />
+        <p style="margin-top: 1rem; font-size: 1rem;">
+          <strong>Join the Spring</strong> — Provide clean water to individuals each and every month by participating in our monthly giving community.
+        </p>
+      </div>
+      <a href="#join" style="
+        margin-top: auto;
+        padding: 0.75rem 1.5rem;
+        background-color: #fdd835;
+        color: #2e2e2e;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        display: inline-block;
+      ">
+        Sign Up
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+  </div>
+</section>
+
+  </section>
+
+
+  <footer>
+    <p>&copy; 2025 Charity: Water | team@charitywater.org | Tel: (646) 688-2323</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
+
